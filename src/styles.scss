@@ -1,1 +1,769 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+
+.pie {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #1fbba6;
+  border: 1px solid #1fbba6;
+  margin: 2em;
+}
+
+.block {
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+
+#time {
+  font-size: 3em;
+  position: absolute;
+  top: 35%;
+  left: 43%;
+  color: #1fbba6;
+}
+
+.degree {
+  /*90 + ( 360 * .1 )*/
+  background-image: linear-gradient(90deg, transparent 50%, white 50%), linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+#pie-container {
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+#time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+  font-size: 3em;
+  color: #999999;
+}
+
+.event-url {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .web {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  #header {
+    padding: 7px;
+  }
+
+  .header {
+    background: #000000;
+    position: relative;
+    padding: 7px 70px 7px 52px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }
+
+  #header .header_home {
+    top: 26px;
+  }
+
+  .header_home {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    margin-top: -11px;
+  }
+
+  #search-form {
+    margin-top: 52px;
+  }
+
+  .search {
+    position: relative;
+  }
+
+  .header_menuBtn {
+    top: 7px;
+    height: 50px;
+  }
+
+  .header_menuBtn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    height: 100%;
+    padding-right: 12px;
+    text-align: center;
+  }
+
+  #search-form .search_input {
+    width: 100%;
+    height: 48px;
+  }
+
+  .search_input {
+    font-size: 18px;
+  }
+
+  .search_input {
+    padding-left: 12px;
+  }
+
+  .search_input {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 3px;
+    padding-top: 2px;
+    font-size: 15px;
+    padding-right: 65px;
+  }
+
+  .search_submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 56px;
+    border-radius: 0 3px 3px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 100%;
+  }
+
+  .search_submit span {
+    line-height: 50px;
+  }
+
+  .search_submit span {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    line-height: 42px;
+    background: -webkit-linear-gradient(#EFD300, #FFBA00);
+    background: -o-linear-gradient(#EFD300, #FFBA00);
+    background: -moz-linear-gradient(#EFD300, #FFBA00);
+    background: -webkit-gradient(linear, left top, left bottom, from(#EFD300), to(#FFBA00));
+    background: linear-gradient(#EFD300, #FFBA00);
+  }
+
+  .search_submit i {
+    margin-left: 10px;
+  }
+
+  .ic-search {
+    background-position: -131px -189px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .ic {
+    display: inline-block;
+    vertical-align: middle;
+    background: url('./assets/images/images.png') no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+  }
+
+  .ic-search {
+    background-position: -131px -189px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .ic {
+    display: inline-block;
+    vertical-align: middle;
+    background: url('./assets/images/images.png') no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .page-title {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .sim-tab {
+    font-size: 0;
+    margin-bottom: 15px;
+  }
+
+  .x-scrollbar {
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    margin-right: -12px;
+    padding-right: 12px;
+    margin-left: -12px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+  }
+
+}
+
+body {
+  margin: 0;
+}
+
+.main_wrapper {
+  margin: 0 auto;
+  max-width: 972px;
+  background-color: #f1f1f1;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 151px;
+}
+
+.banner-content {
+  float: left;
+  height: 151px;
+  width: 100%;
+}
+
+.banner-mobile {
+  background-image: url('./assets/images/sim-so-dep-simthanglong.vn-rmc.png');
+  width: 100%;
+  height: 138px;
+  background-position: center;
+  background-repeat: round;
+}
+
+/* .mobile-hide {
+  @media screen and (max-width: 600px) {
+      width: 100%;
+      overflow: hidden;
+      height: 148px !important;
+  }
+} */
+
+table {
+  width: 100%;
+}
+
+table .menu {
+  display: flex;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  border-top: 1px solid #525252;
+}
+
+.main-menu ul {
+  background: #182f33;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.main-menu li:first-child a {
+  background-image: none;
+}
+
+.main-menu li a {
+  padding-left: 20px;
+  padding-right: 10px;
+  display: block;
+  min-width: 40px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: url(https://static.simthanglong.vn/images/menu_sp.gif);
+  background-repeat: no-repeat;
+}
+
+#main {
+  display: flex;
+  max-width: 972px;
+  padding: 5px;
+}
+
+.list-group {
+  width: 195px;
+  margin-bottom: 20px;
+}
+
+.list-group-item.active {
+  color: #fff !important;
+  background: #182f33;
+  border-color: #2b4246;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a:link {
+  color: #00c;
+  text-decoration: none;
+}
+
+.contact-right,
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 9px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #005064 !important;
+  font-weight: 700;
+}
+
+.box2col177 {
+  margin-top: 1px;
+  columns: 177px 2;
+  column-gap: 0;
+  border: 1px solid #ccc;
+}
+
+.list-group {
+  margin-bottom: 20px;
+}
+
+.list-group-item.active {
+  color: #fff !important;
+  background: #182f33;
+  border-color: #2b4246;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#main>article {
+  min-width: 12em;
+  max-width: 577px;
+  padding: 0 5px;
+}
+
+#timkiem .row {
+  background: #182f33;
+  padding: 10px;
+  position: relative;
+  color: #fff;
+}
+
+.search-input {
+  padding: 11px 16px;
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  border: 0 none;
+  outline: 0 none;
+  font-size: 16px;
+  width: 87%;
+  height: 18px;
+}
+
+button,
+input,
+select,
+textarea {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0;
+  font: 13.3333px Arial;
+}
+
+.search-btn {
+  position: absolute;
+  background-color: #ffe11b;
+  border: 1px solid #ffe11b;
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  color: #565656;
+  padding: 10px 20px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  right: 10px;
+}
+
+.sprite-sale {
+  width: 32px;
+  height: 32px;
+  background-position: -235px -27px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.spritestlvn {
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.spritestlvn {
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  color: black;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.photo-grid {
+  position: relative;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.photo-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.telco-background.vinaphone {
+  background-position: 2px -1758px;
+}
+
+.photo-grid li {
+  float: left;
+  position: relative;
+  width: 33.333%;
+}
+
+.telco-background {
+  background: transparent url('./assets/images/telco-background-mobile.png');
+  padding: 2px 0px;
+  background-repeat: no-repeat;
+}
+
+.container-home .photo-grid ul li .simcard {
+  text-align: right;
+}
+
+.photo-grid ul li .simcard {
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 13px;
+  text-align: right;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 1px 1px #dadada;
+  margin: 0 2px;
+}
+
+.so-sim-home {
+  color: #1f6600;
+  font-size: 17px;
+  font-weight: 700;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.simso i,
+.simso2 i,
+.so-sim-home i {
+  color: #f60;
+  font-style: normal;
+}
+
+.photo-grid ul a {
+  color: #000;
+}
+
+.list-group-item.active {
+  color: #fff !important;
+  background: #182f33;
+  border-color: #2b4246;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact-right {
+  text-align: center;
+}
+
+.contact-right,
+.wgc-right {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.contact-right,
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 9px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #005064 !important;
+  font-weight: 700;
+}
+
+.hotline-right {
+  line-height: 25px;
+  text-align: left;
+}
+
+.hotline-right a {
+  position: relative;
+  background: #804d00;
+  color: #fff !important;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 8px 8px 8px 37px;
+  display: block;
+  width: 125px;
+}
+
+.phone {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.hotline-right a {
+  position: relative;
+  background: #804d00;
+  color: #fff !important;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 8px 8px 8px 37px;
+  display: block;
+  width: 125px;
+}
+
+.phone+div {
+  border: 1px solid #fff;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50px;
+  left: 7px;
+  top: 7px;
+}
+
+.hotline-right a {
+  position: relative;
+  background: #804d00;
+  color: #fff !important;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 8px 8px 8px 37px;
+  display: block;
+  width: 125px;
+}
+
+.hotline-right {
+  line-height: 25px;
+  text-align: left;
+}
+
+.stg {
+  background: #ff5722;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 600;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 4px 5px;
+  height: 13px;
+  line-height: 20px;
+}
+
+#contenttext {
+  padding: 0 15px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.bch {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fb_iframe_widget {
+  display: inline-block;
+  position: relative;
+}
+
+.fb_iframe_widget span {
+  display: inline-block;
+  position: relative;
+  text-align: justify;
+}
+
+.hotline_footer {
+  max-width: 350px;
+  display: inline-block;
+  line-height: 25px;
+}
+
+.hotline_footer>div {
+  columns: 164px 2;
+}
+
+.bch a {
+  color: #bfbfbf;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media screen and (max-width: 800px) {
+
+  #main>aside,
+  #main>nav {
+    margin: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 960px) {
+  .main-menu ul {
+    position: static;
+    display: none;
+  }
+
+  .main-menu ul li,
+  li a {
+    width: 100%;
+  }
+
+  .main-menu li {
+    margin-bottom: 1px;
+    margin-left: 0;
+    box-shadow: 0 1px 12px 0 #ccc;
+  }
+
+  .main-menu li {
+    margin-bottom: 1px;
+    margin-left: 0;
+    box-shadow: 0 1px 12px 0 #ccc;
+  }
+
+  #main {
+    flex-flow: column;
+    margin-left: 0;
+  }
+
+  #main>article,
+  #main>aside,
+  #main>nav {
+    order: 0;
+    width: auto;
+  }
+
+  #main>aside,
+  #main>nav {
+    margin: 0;
+  }
+
+  .box2col177 {
+    margin-top: 1px;
+    columns: 177px 2;
+    column-gap: 0;
+    border: 1px solid #ccc;
+  }
+
+  .list-group {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  #lblLocdanhsachsim,
+  .hide480 {
+    display: none;
+  }
+}
