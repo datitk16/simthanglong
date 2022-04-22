@@ -1,0 +1,219 @@
+<div class="main_wrapper">
+  <header>
+    <app-header></app-header>
+  </header>
+  <div id="main">
+    <nav>
+      <div class="list-group"> <a class="list-group-item active">Sim theo
+          giá</a>
+        <div class="box2col177"> <a class="list-group-item lgit">Sim dưới 500 nghìn</a> <a
+            class="list-group-item lgit">Sim giá
+            500
+            - 1 triệu</a> <a class="list-group-item lgit">Sim giá 1 - 3 triệu</a> <a class="list-group-item lgit">Sim
+            giá 3
+            - 5
+            triệu</a> <a class="list-group-item lgit">Sim giá 5 - 10 triệu</a> <a class="list-group-item lgit">Sim giá
+            10 -
+            50 triệu</a> <a class="list-group-item lgit">Sim giá 50
+            - 100 triệu</a> <a class="list-group-item lgit">Sim
+            100 -
+            200 triệu</a> <a class="list-group-item lgit">Sim 200 -
+            500 triệu</a> <a class="list-group-item lgit">Sim trên 500
+            triệu</a>
+          <a class="list-group-item lgit"
+            onclick="document.getElementById('chonkhoanggiabg').style.display='block';document.getElementById('chonkhoanggia').style.top='100px'">Tùy
+            chọn khoảng giá</a> <span class="list-group-item lgit desktop-hide">&nbsp;</span>
+          <div id="chonkhoanggiabg" class="w3-modal" style="display:none"
+            onclick="document.getElementById('btnclosehl').style.display='none';document.getElementById('chonkhoanggiabg').style.display='none';document.getElementById('danhchodaily').style.top='-1500px';document.getElementById('chonkhoanggia').style.top='-500px';document.getElementById('contact-right').setAttribute('style','')">
+          </div>
+          <div id="chonkhoanggia" class="w3-modal-content"
+            style="top:-500px;position: fixed;z-index: 9;width: 300px;left: 50%;margin-left: -150px;-webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;">
+            <div class="w3-container"> <span
+                onclick="document.getElementById('chonkhoanggiabg').style.display='none';document.getElementById('chonkhoanggia').style.top='-500px'"
+                class="w3-button w3-display-topright">×</span>
+              <p><br> </p>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><label for="pricef">Giá từ: </label></td>
+                    <td style=" position: relative; "><input style="padding: 5px;text-align: right;font-weight: bold;"
+                        id="pricef" type="text" onkeyup="formatnumberprice(this)"></td>
+                    <td>₫</td>
+                  </tr>
+                  <tr>
+                    <td><label for="pricee">Đến: </label></td>
+                    <td style=" position: relative; "><input style="padding: 5px;text-align: right;font-weight: bold;"
+                        id="pricee" type="text" onkeyup="formatnumberprice(this)"></td>
+                    <td>₫</td>
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    <td style=" text-align: center; "><input type="button" value=" Tìm theo giá " class="btn-mua"
+                        onclick="lockhoanggia()" style=" border-radius: 0; padding: 10px; margin-top: 13px; ">
+                    </td>
+                    <td> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-group"> <a class="list-group-item active">Sim theo
+          mạng</a>
+        <div class="box2col177"> <a class="list-group-item lgit">Sim Viettel</a> <a class="list-group-item lgit">Sim
+            Vinaphone</a> <a class="list-group-item lgit">Sim Mobifone</a> <a class="list-group-item lgit">Sim
+            Vietnamobile</a> <a class="list-group-item lgit">Sim Gmobile</a> <a class="list-group-item lgit">Sim
+            iTelecom</a> <a class="list-group-item lgit">Sim Reddi</a> <a class="list-group-item lgit" rel="nofollow">Số
+            Tài khoản
+            MB</a> </div>
+      </div>
+      <div class="list-group"> <a class="list-group-item active">Sim theo
+          loại</a>
+        <div class="box2col177"> <a class="list-group-item lgit">Sim trả góp</a>
+          <a class="list-group-item lgit">Sim giá rẻ</a> <a class="list-group-item lgit">Sim
+            khuyến mãi</a> <a class="list-group-item lgit">Sim trả
+            sau</a> <a class="list-group-item lgit">Sim VIP</a> <a class="list-group-item lgit">Sim Lục
+            quý</a> <a class="list-group-item lgit">Sim
+            Ngũ quý</a> <a class="list-group-item lgit">Sim Tứ quý</a> <a class="list-group-item lgit">Sim Taxi</a> <a
+            class="list-group-item lgit">Sim Tam hoa kép</a> <a class="list-group-item lgit">Sim Tam
+            hoa</a> <a class="list-group-item lgit">Sim
+            Lộc phát</a> <a class="list-group-item lgit">Sim Thần Tài</a> <a class="list-group-item lgit">Sim Ông
+            Địa</a> <a class="list-group-item lgit">Sim Lặp kép</a> <a class="list-group-item lgit">Sim Gánh đảo</a> <a
+            class="list-group-item lgit">Sim Tiến lên</a> <a class="list-group-item lgit">Sim Đôi</a> <a
+            class="list-group-item lgit">Sim Dễ nhớ</a> <a class="list-group-item lgit">Sim
+            Năm sinh</a> <a class="list-group-item lgit">Sim Số độc</a> <a class="list-group-item lgit">Sim Lục quý
+            giữa</a> <a class="list-group-item lgit">Sim Ngũ quý giữa</a> <a class="list-group-item lgit">Sim Tứ
+            quý giữa</a> <a class="list-group-item lgit">Sim đầu số cổ</a> <a class="list-group-item lgit">Sim Đại
+            Cát</a> <a class="list-group-item lgit">Sim phong thủy</a> <a class="list-group-item lgit">Sim 4G</a> <a
+            class="list-group-item lgit">Thu mua sim</a>
+          <!--<a class="list-group-item lgit" href="/84/sim-tu-chon.html">Sim Tự chọn</a>-->
+        </div>
+      </div>
+      <div class="list-group hide480"> <a class="list-group-item active">Sim
+          năm
+          sinh</a>
+        <div class="box2col177"> <a class="list-group-item lgit">Sim năm
+            sinh
+            1996</a> <a class="list-group-item lgit">Sim năm sinh
+            1995</a> <a class="list-group-item lgit">Sim năm sinh
+            1994</a> <a class="list-group-item lgit">Sim năm sinh
+            1993</a> <a class="list-group-item lgit">Sim năm sinh
+            1992</a> <a class="list-group-item lgit">Sim năm sinh
+            1991</a> <a class="list-group-item lgit">Sim năm sinh
+            1990</a> <a class="list-group-item lgit">Sim năm sinh
+            1989</a> <a class="list-group-item lgit">Sim năm sinh
+            1988</a> <a class="list-group-item lgit">Sim năm sinh
+            1987</a> <a class="list-group-item lgit">Sim năm sinh
+            1986</a> <a class="list-group-item lgit">Sim năm sinh
+            1985</a> </div>
+      </div>
+    </nav>
+    <article>
+      <router-outlet></router-outlet>
+    </article>
+    <aside>
+      <div class="list-group mobile-hide"> <a class="list-group-item active">Bán
+          hàng online</a>
+        <div class="contact-right" id="contact-right">
+          <h3 class="hotline-right"><a>
+              <div class="phone"><span>&nbsp;</span></div>
+              <div></div> 0911.17.6699
+            </a></h3>
+          <!--<h3 class="hotline-right" ><a href="sms:0911176699"> <div class="phone" style=" font-size: 10px; top: 9px; left: 10px; ">SMS</div><div></div> &nbsp; &nbsp;(024).6666.6666 </a></h3>-->
+          <h3 class="hotline-right">
+            <a style="background: #0C599C;"><img alt="Chat với Sim Thăng Long"
+                style="width: 41px; border-radius: 126px; position: absolute; left: 0px; top: 0; "> &emsp; Chat </a>
+          </h3>
+          <h3 style="margin-bottom: 5px">Góp ý, khiếu nại:</h3><a><strong
+              style=" color: #005064; font-size: 16px; ">098.365.6699</strong></a><br>
+        </div>
+      </div>
+      <div class="list-group"> <a class="list-group-item active">Đơn hàng
+          mới</a>
+        <div class="wgc-right">
+          <ul style=" list-style: none; padding: 5px; margin: 0; ">
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Hoàng Duy Thông</div> <label>&emsp;038856...59</label><br> <label class="stg"
+                style="background:#4CAF50">Đã giao hàng</label> <span>&nbsp; (19h49)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Huỳnh Kỳ Duyên</div> <label>&emsp;034981...78</label><br> <label class="stg"> Đã
+                đặt
+                mua </label> <span>&nbsp; (19h47)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Đỗ Hoàng Sa</div> <label>&emsp;055216...77</label><br> <label class="stg"> Đã
+                đặt
+                mua </label> <span>&nbsp; (19h45)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Đặng Nguyễn Hải An</div> <label>&emsp;092847...87</label><br> <label class="stg"
+                style="background:#4CAF50">Đã giao hàng</label> <span>&nbsp; (19h45)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Trần Ngọc Thiện</div> <label>&emsp;035648...47</label><br> <label class="stg">
+                Đã
+                đặt mua </label> <span>&nbsp; (19h43)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Bùi Việt Võ</div> <label>&emsp;098114...16</label><br> <label class="stg" style="background:#4CAF50">Đã
+                giao hàng</label> <span>&nbsp; (19h42)</span>
+            </li>
+            <li style=" border-bottom: 1px solid #ccc; padding-bottom: 5px; ">
+              <div
+                style=" margin: 3px;display: block;font-size: 1.17em;margin-inline-start: 0px;margin-inline-end: 0px; font-weight: bold;">
+                Dương Thanh Mai</div> <label>&emsp;088663...30</label><br> <label class="stg">
+                Đã
+                đặt mua </label> <span>&nbsp; (19h40)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="list-group item-tintuc"> <a class="list-group-item active">Bạn
+          cần biết</a> <a class="list-group-item lgit">Cam
+          kết
+          bán hàng</a> <a class="list-group-item lgit">Kiểm
+          tra thông tin chủ thuê bao
+          di
+          động</a> <a class="list-group-item lgit">Cách
+          mua
+          sim và thanh toán</a> <a class="list-group-item lgit">Kiểm tra
+          sim còn hay đã bán</a> <a class="list-group-item lgit">Cách chọn
+          Sim hợp
+          tuổi</a> <a class="list-group-item lgit">Tại sao mua được sim giá
+          rẻ
+          tại Sim Thăng Long</a> <a class="list-group-item lgit">Những điều cần biết về
+          chuyển
+          mạng giữ số</a> </div>
+      <div class="list-group item-tintuc mobile-hide"> <a class="list-group-item active">Tin mới cập
+          nhật</a> <a class="list-group-item lgit">#3
+          Cách kiểm tra dung lượng
+          sim
+          4G Mobifone đơn giản nhất</a> <a class="list-group-item lgit">Đầu số 0907 là mạng
+          gì?
+          Giải mã ý nghĩa đằng sau đầu số 0907</a> <a class="list-group-item lgit">0906 là mạng gì? Khám phá bí mật đằng
+          sau đầu số
+          0906</a>
+        <a class="list-group-item lgit">Cách
+          chuyển sim Viettel sang sim 3G đơn giản nhất</a>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>
