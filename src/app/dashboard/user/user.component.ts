@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  item$: Observable<any[]>;
   user = new User();
+  isSuccess: boolean;
   constructor(
     private firestore: Firestore,
   ) { }
@@ -19,7 +19,13 @@ export class UserComponent implements OnInit {
   }
 
   submit() {
-    this.addUser(this.user).then(() => { })
+    this.addUser(this.user).then(() => {
+      this.isSuccess = true;
+      setTimeout(() => {
+        this.user = new User();
+        this.isSuccess = false;
+      }, 3000)
+    })
   }
 
   async addUser(user: User) {

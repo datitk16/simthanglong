@@ -18,6 +18,7 @@
           required />
         <label class="input_label">Số điện thoại</label>
       </div>
+      <h1 *ngIf="isSuccess">Cảm ơn quý khách đã gửi thông tin.</h1>
       <button class="card_button" (click)="submit()">Gửi</button>
     </form>
   </div>
