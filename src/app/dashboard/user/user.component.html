@@ -4,18 +4,21 @@
     <p class="card_title-info">Khách hàng vui lòng để lại thông tin, nhân viên chúng tôi liên hệ sớm nhất có thể.</p>
     <form class="card_form">
       <div class="input">
-        <input type="text" class="input_field" required />
+        <input [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}" type="text" class="input_field"
+          required />
         <label class="input_label">Họ tên khách hàng</label>
       </div>
       <div class="input">
-        <input type="text" class="input_field" required />
+        <input [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" type="text" class="input_field"
+          required />
         <label class="input_label">Địa chỉ email</label>
       </div>
       <div class="input">
-        <input type="text" class="input_field" required />
+        <input [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}" type="text" class="input_field"
+          required />
         <label class="input_label">Số điện thoại</label>
       </div>
-      <button class="card_button">Gửi</button>
+      <button class="card_button" (click)="submit()">Gửi</button>
     </form>
   </div>
   <div class="fish-shadow-con">
