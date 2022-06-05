@@ -1,4 +1,6 @@
+import { IPAddress } from './../models/ip-address.model';
 import { Component, OnInit } from '@angular/core';
+import { IpService } from '../services/ip.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  private iPAddress = new IPAddress();
+  constructor(
+    private ipService: IpService
+  ) { }
 
   ngOnInit(): void {
+    this.ipService.getIp().subscribe(x => {
+      this.iPAddress = x.body as IPAddress;
+      console.log(this.iPAddress)
+    })
+
   }
 
 }

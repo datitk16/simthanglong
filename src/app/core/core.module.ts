@@ -4,8 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './dashboard/header/header.component';
 import { FooterComponent } from './dashboard/footer/footer.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,8 @@ import { FooterComponent } from './dashboard/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     DashboardComponent
