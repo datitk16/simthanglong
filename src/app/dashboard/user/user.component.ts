@@ -1,7 +1,6 @@
 import { User } from './../models/user.model';
 import { Component, OnInit } from '@angular/core';
 import { addDoc, collection, Firestore, } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user',
