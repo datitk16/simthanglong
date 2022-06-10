@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { User } from './../models/user.model';
 import { Component, OnInit } from '@angular/core';
 import { addDoc, collection, Firestore, } from '@angular/fire/firestore';
@@ -12,6 +13,7 @@ export class UserComponent implements OnInit {
   isSuccess: boolean;
   constructor(
     private firestore: Firestore,
+    private datePipe:DatePipe
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class UserComponent implements OnInit {
   }
 
   async addUser(user: User) {
+    user.date = this.datePipe.transform(Date.now(), 'dd/MM/yyyy h:mm:ss a') || '';
     this.user = Object.assign({}, user)
     const usersRef = collection(this.firestore, 'users');
     await addDoc(usersRef, this.user);

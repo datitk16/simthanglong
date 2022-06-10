@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { environment } from './../environments/environment.prod';
 import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
@@ -21,7 +22,9 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
